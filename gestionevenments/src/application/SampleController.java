@@ -1,5 +1,7 @@
 package application;
 
+import java.text.DecimalFormat;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -81,6 +83,14 @@ public class SampleController {
     			
     			 lblres.setText(Integer.toString(res));
     }
-    
+   
+    @FXML
+    void decimalNbr(DecimalFormat e)
+    {
+    		double nbr = 56.6754;
+    		DecimalFormat nformat = new DecimalFormat("#0.00");
+    		System.out.println(nformat.format(nbr));
+    		System.out.println(String.format("%.2f", nbr));
+    }
 
 }
